@@ -1,51 +1,53 @@
-import React, { Component } from 'react'
 import './App.css'
+import React, { useEffect, useState } from 'react'
 import Mole from './components/mole/Mole.js'
 
-class App extends Component {
-  state = {
-    dens: this.getDensState(),
-    points: 0,
-  }
-  componentDidMount() {
-    this.startGame()
-  }
-  startGame() {
+function App() {
+  // states
+  const [dens, setDens] = useState(getDensState())
+  const [points, setPoints] = useState(0)
+
+  // effects
+  useEffect(() => {
+    startGame()
+  }, [])
+
+  // helpers
+  function startGame() {
     setInterval(() => {
-      this.setState({
-        dens: this.getDensState()
-      })
+      setDens(getDensState())
     }, 1500)
   }
-  getDensState() {
+
+  function getDensState() {
     return new Array(9).fill({}).map(() => {
       return { 
         isMoleVisible: [true,false][Math.round(Math.random())] 
       }
     })
   }
-  onMoleWhacked() {
-    this.setState({
-      points: this.state.points + 1
-    })
+
+  function onMoleWhacked() {
+    setPoints(points + 1)
   }
-  render() {
-    const dens = this.state.dens.map((den, index) => {
-      return (
-        <Mole key={`mole-${index}`} />
-      )
-    })
+
+  // renders
+  const denElements = dens.map((den, index) => {
     return (
-      <div className="App">
-        <h1>WHACK-A-MOLE!</h1>
-        <h2>Points: {this.state.points}</h2>
-        <div className="dens">
-          {dens}
-          <div style={{clear: 'both'}}></div>
-        </div>
-      </div>
+      <Mole key={`mole-${index}`} />
     )
-  }
+  })
+
+  return (
+    <div className="App">
+      <h1>WHACK-A-MOLE!</h1>
+      <h2>Points: { points }</h2>
+      <div className="dens">
+        { denElements }
+        <div style={{clear: 'both'}}></div>
+      </div>
+    </div>
+  )
 }
 
 export default App

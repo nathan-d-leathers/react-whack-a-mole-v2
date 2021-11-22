@@ -16,13 +16,11 @@ The game "engine" has already been created.  The state of the top-level componen
 
 Inspect `App.js` and attempt to understand the game engine logic - this may help you in achieving the objectives.
 
-Release 0
--------------
-* Modify the `props` that are passed into `Mole.js` and the `Mole.js` component itself so that the Mole image only appears when the **isMoleVisible** property of the appropriate **den** object is set to true.
+## Release 0
+- Modify the `props` that are passed into `Mole.js` and the `Mole.js` component itself so that the Mole image only appears when the **isMoleVisible** property of the appropriate **den** object is set to true.
 
-Release 1
--------------
-* Modify `Mole.js` so that points are incremented whenever a visible mole is clicked.
-* Add comments to the `startGame()`, `getDensState()`, and `onMoleWhacked()` functions that explain what the code is doing.
+## Release 1
+- Modify `Mole.js` so that points are incremented whenever a visible mole is clicked.
+- Add comments to the `startGame()`, `getDensState()`, and `onMoleWhacked()` functions that explain what the code is doing.
 
 
