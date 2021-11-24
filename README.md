@@ -1,7 +1,7 @@
 Whack-A-Mole
 ===================
 Two factors determine what a React Component renders:
-  1. `Props` - properties passed into the component from it's parent.
+  1. `Props` - properties passed into the component from its parent.
   2. `State` - the internal state of a component
 
 If you haven't already, read the [React docs](https://facebook.github.io/react/docs/hello-world.html) to get a better sense of these two concepts.
