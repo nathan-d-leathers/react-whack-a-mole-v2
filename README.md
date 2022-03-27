@@ -1,5 +1,5 @@
-Whack-A-Mole
-===================
+# React: Whack-A-Mole
+
 Two factors determine what a React Component renders:
   1. `Props` - properties passed into the component from its parent.
   2. `State` - the internal state of a component
