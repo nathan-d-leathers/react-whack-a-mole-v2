@@ -8,7 +8,7 @@ If you haven't already, read the [React docs](https://facebook.github.io/react/d
 
 In this challenge, we'll be building a [Whack-A-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) game. This challenge will give us more practice with using to state and props values in React. 
 
-Instead of creating a React app from scratch, we'll instead be working on an existing (pre-created) React app. Instead of running `npx create-react-app`, we instead will need to navigate into the project (the same level as the `package.json` file) folder and run `npm install`. NPM will look at our `package.json` file and install all the required libraries for this project. (This is akin to running `pip install -r requirements.txt` for Django projects)
+Instead of creating a React app from scratch, we'll instead be working on an existing (pre-created) React app. Instead of running `npx create vite`, we instead will need to navigate into the project (the same level as the `package.json` file) folder and run `npm install`. NPM will look at our `package.json` file and install all the required libraries for this project. (This is akin to running `pip install -r requirements.txt` for Django projects)
 
 The game "engine" has already been created. The state variable of the top-level component, `App.js`, contains two items:
   1. **dens** - an array of objects that are a representation of the "holes" in the whack-a-mole game.
