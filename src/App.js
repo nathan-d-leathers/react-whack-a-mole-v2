@@ -6,17 +6,17 @@ function App() {
   // states
   const [dens, setDens] = useState(getDensState())
   const [points, setPoints] = useState(0)
-
+  
   // effects
   useEffect(() => {
     startGame()
   }, [])
-
+  
   // helpers
   function startGame() {
     setInterval(() => {
       setDens(getDensState())
-    }, 1500)
+    }, 350)
   }
 
   function getDensState() {
@@ -34,9 +34,10 @@ function App() {
   // renders
   const denElements = dens.map((den, index) => {
     return (
-      <Mole key={`mole-${index}`} />
+      <Mole key={`mole-${index}`} dens={den.isMoleVisible} whack={onMoleWhacked}/>
     )
   })
+
 
   return (
     <div className="App">
